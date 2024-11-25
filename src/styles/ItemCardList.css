@@ -1,0 +1,46 @@
+.card-list-container {
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    background: url("https://beiz.jp/images_T/pastel/pastel_00026.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.1);
+  }
+  

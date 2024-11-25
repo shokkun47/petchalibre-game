@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://beiz.jp/images_T/pastel/pastel_00026.jpg') no-repeat center center fixed;
+  background-size: cover; /* 背景画像を画面全体にカバー */
+  color: white; /* デフォルトの文字色を白に設定 */
+  overflow-x: hidden; /* 横スクロールを無効化 */
+  box-sizing: border-box;
+}
+
+
+.container {
+  text-align: center;
+  padding: 20px;
+}

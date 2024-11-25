@@ -1,0 +1,57 @@
+.add-character-container {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("https://beiz.jp/images_T/pastel/pastel_00026.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 300px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.add-button,
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.back-button {
+  background-color: #ff5722;
+  color: white;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.back-button:hover {
+  background-color: #e64a19;
+  transform: scale(1.1);
+}

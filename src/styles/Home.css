@@ -1,0 +1,78 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("https://beiz.jp/images_T/pastel/pastel_00026.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  h1 {
+    color: white;
+  }
+  
+  p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: white;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* ボタン間のスペース */
+  }
+  
+  /* 共通ボタンスタイル */
+  .start-button,
+  .add-button,
+  .list-button {
+    width: 250px; /* ボタンの横幅を統一 */
+    padding: 15px;
+    font-size: 18px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px; /* ボタンの丸みを統一 */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* ホバースタイルの共通設定 */
+  .start-button:hover,
+  .add-button:hover,
+  .list-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ゲーム開始ボタンを目立たせる */
+  .start-button {
+    font-size: 20px; /* 少し大きめのフォント */
+    background-color: #ff9800; /* 目立つオレンジ色 */
+    font-weight: bold; /* 太字にする */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* ボタンに影を追加 */
+  }
+  
+  .start-button:hover {
+    background-color: #fb8c00; /* ホバー時に濃いオレンジ */
+    transform: scale(1.1); /* ホバー時にさらに強調 */
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .start-button,
+    .add-button,
+    .list-button {
+      width: 200px; /* スマホ画面ではボタンを小さく */
+      padding: 12px;
+      font-size: 16px;
+    }
+  
+    .start-button {
+      font-size: 18px; /* ゲーム開始ボタンも調整 */
+    }
+  }
+  

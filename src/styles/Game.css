@@ -1,0 +1,117 @@
+.game-container {
+    text-align: center;
+    /* margin-top: 20px; */
+    padding: 20px;
+    background: url('https://beiz.jp/images_T/pastel/pastel_00026.jpg') no-repeat center;
+    background-size: cover; /* 画面全体に画像をカバー */
+    min-height: 100vh; /* 画面全体の高さを確保 */
+    box-sizing: border-box; /* パディングを含めてサイズ計算 */
+  }
+  
+  .player-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .player-section.reverse {
+    transform: rotate(180deg);
+  }
+  
+  .card-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* カード間のスペースを小さく */
+    margin-top: 10px;
+    flex-wrap: wrap; /* 横幅が足りない場合に折り返す */
+  }
+  
+  .card {
+    max-width: 150px; /* カードの幅を小さく */
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card img {
+    width: 100%; /* カードの幅に合わせる */
+    height: 100px; /* 高さを小さく */
+    object-fit: cover; /* 画像をカード内で整える */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .card-content {
+    padding: 5px; /* 内容の余白を小さく */
+    text-align: center;
+    color: #333;
+    font-size: 0.8rem; /* フォントサイズを小さく */
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* スタートボタン */
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .card-row {
+      flex-wrap: nowrap; /* 折り返さずに横並びに固定 */
+      overflow-x: auto; /* 横スクロール可能にする */
+      gap: 5px; /* カード間のスペースをさらに縮小 */
+    }
+  
+    .card {
+      max-width: 120px; /* カードの幅をさらに小さく */
+    }
+  
+    .card img {
+      height: 70px; /* 画像の高さを縮小 */
+    }
+  
+    .card-content {
+      font-size: 0.7rem; /* テキストサイズを縮小 */
+      padding: 5px;
+    }
+    
+  }
+  .game-over {
+    text-align: center;
+    margin: 5px 0;
+  }
+  
+  .game-over h1 {
+    font-size: 2rem;
+    color: red;
+  }
+  
+  .home-button {
+    padding: 5px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+  }
+
+  
