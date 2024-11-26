@@ -16,7 +16,7 @@ function Game() {
   };
 
   const [isStarted, setIsStarted] = useState(false); // スタートボタンが押されたかどうか
-  const [timeLeft, setTimeLeft] = useState(5); // 2分のタイマー（秒単位）
+  const [timeLeft, setTimeLeft] = useState(120); // 2分のタイマー（秒単位）
   const [revealed, setRevealed] = useState({}); // 各カードの表示状態
   const [isFinished, setIsFinished] = useState(false); // ゲームが終了したかどうか
 
