@@ -1,7 +1,7 @@
 /* ゲーム画面全体のスタイル */
 .game-container {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background: url('https://beiz.jp/images_T/pastel/pastel_00026.jpg') no-repeat center;
     background-size: cover;
     min-height: 100vh;
@@ -13,53 +13,56 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom:5px;
   }
   
   .player-section.reverse {
     transform: rotate(180deg);
   }
   
-  /* カードを横並びに配置 */
-  .card-row {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-  }
-  
   /* カード全体のスタイル */
-  .card {
-    max-width: 150px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* カード画像のスタイル */
-  .card img {
-    width: 100%;
-    height: 100px;
-    object-fit: contain;
-    padding: 5px;
-    margin: 0 auto;
-    background-color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  }
-  
-  /* カードのテキスト部分 */
-  .card-content {
-    padding: 5px;
-    text-align: center;
-    color: #333;
-    font-size: 0.8rem;
-    background: rgba(255, 255, 255, 0.8);
-  }
-  
+.card {
+  max-width: 100px; /* カードの最大幅を調整 */
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0; /* カードが縮小しないように設定 */
+}
+
+/* カード画像のスタイル */
+.card img {
+  width: 100%;
+  height: 80px; /* 高さを小さく調整 */
+  object-fit: contain;
+  /* padding: 5px; */
+  margin: 0 auto;
+  background-color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* カードのテキスト部分 */
+.card-content {
+  /* padding: 5px; */
+  text-align: center;
+  color: #333;
+  font-size: 0.7rem; /* テキストサイズを小さく */
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* カードを横並びに配置 */
+.card-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px; /* ギャップを小さく */
+  margin-top: 5px;
+  flex-wrap: wrap; /* アイテムが幅を超えた場合に折り返す */
+  max-width: 100%; /* 最大幅を設定 */
+  overflow-x: hidden; /* 横スクロールを防ぐ */
+}
+
   .card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
@@ -70,13 +73,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 10px 0;
   }
   
   /* ゲーム終了時のスタイル */
   .game-over {
     text-align: center;
-    margin: 5px 0;
+    /* margin: 5px 0; */
   }
   
   .game-over h1 {
@@ -85,7 +88,7 @@
   }
   
   .home-button {
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 16px;
     background-color: #4caf50;
     border: none;
@@ -123,7 +126,7 @@
   
     .home-button {
       font-size: 14px;
-      padding: 8px 16px;
+      padding: 4px 8px;
     }
   
     .game-over h1 {
