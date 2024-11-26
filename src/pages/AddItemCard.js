@@ -23,7 +23,7 @@ function AddItemCard() {
       alert(`アイテムカードを追加しました (ID: ${docRef.id})`);
       setName(""); // 入力フィールドをリセット
     } catch (error) {
-      console.error("エラーが発生しました:", error);
+      alert(`カードを追加する権限がありません`);
     }
   };
 

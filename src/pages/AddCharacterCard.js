@@ -22,11 +22,12 @@ function AddCharacterCard() {
         name,
         imageUrl,
       });
-      alert(`キャラクターカードを追加しました (ID: ${docRef.id})`);
+      // alert(`キャラクターカードを追加しました (ID: ${docRef.id})`);
+      alert(`カードを追加する権限がありません`);
       setName(""); // 入力フィールドをリセット
       setImageUrl("");
     } catch (error) {
-      console.error("エラーが発生しました:", error);
+      alert(`カードを追加する権限がありません`);
     }
   };
 

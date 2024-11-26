@@ -1,6 +1,18 @@
 {
   "hosting": {
     "public": "build",
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Set-Cookie",
+            "value": "SameSite=None; Secure"
+          }
+        ]
+      }
+    ],
+    
     "ignore": [
       "firebase.json",
       "**/.*",
