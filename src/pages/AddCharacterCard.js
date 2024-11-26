@@ -5,18 +5,25 @@ import { useNavigate } from "react-router-dom";
 import "../styles/AddCharacterCard.css";
 
 function AddCharacterCard() {
-  const [name, setName] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [name, setName] = useState(""); // キャラクター名
+  const [imageUrl, setImageUrl] = useState(""); // 画像URL
   const navigate = useNavigate(); // ナビゲート用
 
   const handleAddCard = async () => {
+    // 入力チェック: キャラクター名と画像URLが両方入力されていない場合
+    if (!name || !imageUrl) {
+      alert("キャラクター名と画像URLを入力してください。");
+      return;
+    }
+
     try {
+      // Firestore にデータを追加
       const docRef = await addDoc(collection(db, "character-card"), {
         name,
         imageUrl,
       });
       alert(`キャラクターカードを追加しました (ID: ${docRef.id})`);
-      setName("");
+      setName(""); // 入力フィールドをリセット
       setImageUrl("");
     } catch (error) {
       console.error("エラーが発生しました:", error);

@@ -5,16 +5,23 @@ import { useNavigate } from "react-router-dom";
 import "../styles/AddItemCard.css";
 
 function AddItemCard() {
-  const [name, setName] = useState("");
+  const [name, setName] = useState(""); // アイテム名
   const navigate = useNavigate(); // ナビゲート用
 
   const handleAddCard = async () => {
+    // 入力チェック: アイテム名が空の場合
+    if (!name) {
+      alert("アイテム名を入力してください。");
+      return;
+    }
+
     try {
+      // Firestore にデータを追加
       const docRef = await addDoc(collection(db, "item-card"), {
         name,
       });
       alert(`アイテムカードを追加しました (ID: ${docRef.id})`);
-      setName("");
+      setName(""); // 入力フィールドをリセット
     } catch (error) {
       console.error("エラーが発生しました:", error);
     }

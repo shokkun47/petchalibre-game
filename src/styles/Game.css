@@ -1,13 +1,14 @@
+/* ゲーム画面全体のスタイル */
 .game-container {
     text-align: center;
-    /* margin-top: 20px; */
     padding: 20px;
     background: url('https://beiz.jp/images_T/pastel/pastel_00026.jpg') no-repeat center;
-    background-size: cover; /* 画面全体に画像をカバー */
-    min-height: 100vh; /* 画面全体の高さを確保 */
-    box-sizing: border-box; /* パディングを含めてサイズ計算 */
+    background-size: cover;
+    min-height: 100vh;
+    box-sizing: border-box;
   }
   
+  /* プレイヤーのセクション */
   .player-section {
     display: flex;
     flex-direction: column;
@@ -19,16 +20,18 @@
     transform: rotate(180deg);
   }
   
+  /* カードを横並びに配置 */
   .card-row {
     display: flex;
     justify-content: center;
-    gap: 10px; /* カード間のスペースを小さく */
+    gap: 10px;
     margin-top: 10px;
-    flex-wrap: wrap; /* 横幅が足りない場合に折り返す */
+    flex-wrap: wrap;
   }
   
+  /* カード全体のスタイル */
   .card {
-    max-width: 150px; /* カードの幅を小さく */
+    max-width: 150px;
     background: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -37,18 +40,23 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
+  /* カード画像のスタイル */
   .card img {
-    width: 100%; /* カードの幅に合わせる */
-    height: 100px; /* 高さを小さく */
-    object-fit: cover; /* 画像をカード内で整える */
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    padding: 5px;
+    margin: 0 auto;
+    background-color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
   
+  /* カードのテキスト部分 */
   .card-content {
-    padding: 5px; /* 内容の余白を小さく */
+    padding: 5px;
     text-align: center;
     color: #333;
-    font-size: 0.8rem; /* フォントサイズを小さく */
+    font-size: 0.8rem;
     background: rgba(255, 255, 255, 0.8);
   }
   
@@ -57,7 +65,7 @@
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
   }
   
-  /* スタートボタン */
+  /* スタートボタンとタイマー */
   .center-container {
     display: flex;
     justify-content: center;
@@ -65,29 +73,7 @@
     margin: 20px 0;
   }
   
-  
-  /* レスポンシブ対応 */
-  @media (max-width: 768px) {
-    .card-row {
-      flex-wrap: nowrap; /* 折り返さずに横並びに固定 */
-      overflow-x: auto; /* 横スクロール可能にする */
-      gap: 5px; /* カード間のスペースをさらに縮小 */
-    }
-  
-    .card {
-      max-width: 120px; /* カードの幅をさらに小さく */
-    }
-  
-    .card img {
-      height: 70px; /* 画像の高さを縮小 */
-    }
-  
-    .card-content {
-      font-size: 0.7rem; /* テキストサイズを縮小 */
-      padding: 5px;
-    }
-    
-  }
+  /* ゲーム終了時のスタイル */
   .game-over {
     text-align: center;
     margin: 5px 0;
@@ -99,7 +85,7 @@
   }
   
   .home-button {
-    padding: 5px 20px;
+    padding: 10px 20px;
     font-size: 16px;
     background-color: #4caf50;
     border: none;
@@ -113,5 +99,35 @@
     background-color: #45a049;
     transform: scale(1.1);
   }
-
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .card-row {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 5px;
+    }
+  
+    .card {
+      max-width: 120px;
+    }
+  
+    .card img {
+      height: 80px;
+    }
+  
+    .card-content {
+      font-size: 0.7rem;
+      padding: 5px;
+    }
+  
+    .home-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .game-over h1 {
+      font-size: 1.5rem;
+    }
+  }
   
